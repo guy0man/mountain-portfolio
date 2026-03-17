@@ -1,4 +1,5 @@
 three
 gsap
 react
-vite
+vite 
+tailwind
