@@ -53,7 +53,7 @@ function App() {
                   <img
                     src="/images/profile-pic.jpg"
                     alt="Person"
-                    className="h-200 w-full mb-3"
+                    className="max-h-200 w-full mb-3"
                   />
 
                   <p className='text-xl drop-shadow-sm text-white'>Martin Bernard Bondoc</p>
