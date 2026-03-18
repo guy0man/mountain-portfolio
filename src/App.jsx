@@ -321,7 +321,7 @@ function App() {
     const loader = new GLTFLoader()
     
     loader.load(
-      "/models/high_poly_mountain1.glb",
+      "/models/high_poly_mountain.glb",
 
       (gltf) => {
         const model = gltf.scene
