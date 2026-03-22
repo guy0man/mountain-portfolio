@@ -2,28 +2,15 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { useEffect,useState } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { ArrowDown, ChevronsUpDown } from "lucide-react"
+import { ArrowDown,User,SearchAlert,Brush,ShieldCheck,FileCodeCorner,BookText,Phone } from "lucide-react"
+import {Profile,AboutMe,Skills,Certifications,Projects,Publications,Contact} from "@/sections"
 
 import { Button } from "@/components/ui/button"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
 
 function App() {
   const [section, setSection] = useState(0)
@@ -38,32 +25,13 @@ function App() {
       {
         position: new THREE.Vector3(3.301610505881807, 3.532044894502247, -0.5585040995770612),
         lookAt: new THREE.Vector3(1.6153247805806974, 2.669515574215985, -1.7507656806188745),
-        content: (
-          <div>
-          </div>
-        ),
         buttons: [
           {
             position: new THREE.Vector3(0.9881191768347881,3.103148772120465,-1.8815077650838121),
+            icon: User,
             label: "Profile",
             side: "left",
-            content: (
-              <div>
-                <div className="border border-white/50 rounded-none drop-shadow-sm p-3">
-                  <img
-                    src="/images/profile-pic.jpg"
-                    alt="Person"
-                    className="max-h-200 w-full mb-3"
-                  />
-
-                  <p className='text-xl drop-shadow-sm text-white'>Martin Bernard Bondoc</p>
-                  <p className='text-sm drop-shadow-sm text-white/70 mb-1'>Computer Science Undergraduate in Mapúa Malayan Colleges Mindanao</p>
-                  <p className='text-sm drop-shadow-sm text-white/70'>Exploring the world of Cyber Security and Software Engineering</p>
-                </div>
-                <p className='text-xs text-black/50 font-light'>Profile</p>
-
-              </div>
-            ),
+            content:Profile,
           }
 
         ]
@@ -74,70 +42,17 @@ function App() {
         buttons: [
           {
             position: new THREE.Vector3(-1.1695185831153259,2.3662284620799747,-1.4452316842638628),
+            icon:SearchAlert,
             label: "About Me",
             side: "right",
-            content: (
-              <div>
-                <div className="w-200 border border-white/50 rounded-none drop-shadow-sm p-3">
-                  <p className='text-sm drop-shadow-sm text-white mb-1 text-justify'>
-                  I am a Computer Science undergraduate at Mapúa Malayan Colleges Mindanao with a 
-                  strong interest in cybersecurity, networking, and software engineering. I enjoy 
-                  exploring emerging technologies and approaching complex problems with creative solutions. 
-                  My goal is to apply my skills to build meaningful technologies while collaborating with 
-                  like-minded individuals.</p>
-                </div>
-                <p className='text-xs text-black/50 font-light'>About Me</p>
-              </div>
-            ),
+            content: AboutMe,
           },
           {
             position: new THREE.Vector3(-1.7414442713365392,2.2341654139303606,-0.9423301740826041),
+            icon: Brush,
             label: "Skills",
             side: "left",
-            content: (
-              <div>
-                <div className="flex justify-between gap-5 border border-white/50 rounded-none drop-shadow-sm p-3 text-white">
-                  <div>
-                    <p className='font-semibold'>Programming</p>
-                    <ul className='text-sm'>
-                      <li>- Python</li>
-                      <li>- C#</li>
-                      <li>- C++</li>
-                      <li>- JavaScript</li>
-                      <li>- TypeScript</li>
-                      <li>- HTML</li>
-                      <li>- CSS</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className='font-semibold'>Frameworks & Libraries</p>
-                    <ul>
-                      <li>- React</li>
-                      <li>- Django</li>
-                      <li>- Laravel</li>
-                      <li>- Three.js</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className='font-semibold'>Databases</p>
-                    <ul>
-                      <li>- MySQL</li>
-                      <li>- PostgreSQL</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className='font-semibold'>Tools</p>
-                    <ul>
-                      <li>- GitHub</li>
-                      <li>- Docker</li>
-                      <li>- Microsoft 365</li>
-                    </ul>
-                  </div>
-
-                </div>
-                <p className='text-xs text-black/50 font-light'>Skills</p>
-              </div>
-            )
+            content: Skills
           }
         ]
       },
@@ -147,46 +62,10 @@ function App() {
         buttons: [
           {
             position: new THREE.Vector3(-1.9975363025024653,1.9087208631109156,0.5786891850501674),
+            icon:ShieldCheck,
             label: "Certifications",
             side: "left",
-            content: (
-              <div>
-                <div className="w-200 border border-white/50 rounded-none drop-shadow-sm p-3">
-                  <ScrollArea className="text-white text-xl h-auto h-max-200 rounded-none">
-                    <Collapsible>
-                      <div className='flex gap-2'>
-                        <p>Cisco Certified Network Associate (CCNA)</p>
-                        <CollapsibleTrigger asChild>
-                          <Button className="size-8 bg-transarent font-semibold border-none p-0">
-                            <ChevronsUpDown />
-                          </Button>
-                        </CollapsibleTrigger>
-                      </div>
-                      <CollapsibleContent>
-                        <img
-                          src="/images/CCNA-Cert.jpg"
-                          alt="Person"
-                          className="w-full mb-3"
-                        />
-                      </CollapsibleContent>
-                    </Collapsible>
-                    <Collapsible>
-                      <div className='flex gap-2'>
-                        <p>Microsoft Office Specialist: Excel Associate</p>
-                        <CollapsibleTrigger asChild>
-                          <Button className="size-8 bg-transarent font-semibold border-none p-0">
-                            <ChevronsUpDown />
-                          </Button>
-                        </CollapsibleTrigger>
-                      </div>
-                      <CollapsibleContent>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </ScrollArea>
-                </div>
-                <p className='text-xs text-black/50 font-light'>Certifications</p>
-              </div>
-            ),
+            content: Certifications
           }
         ]
       },
@@ -196,41 +75,17 @@ function App() {
         buttons: [
           {
             position: new THREE.Vector3(-0.021873740755842218,1.1621931519107591,4.509676831481607),
+            icon:FileCodeCorner,
             label: "Projects",
             side: "right",
-            content: (
-              <div>
-                <div className="w-200 border border-white/50 rounded-none drop-shadow-sm p-3">
-                 <ScrollArea className="text-white text-xl h-auto h-max-200 rounded-none">
-                    <div className='text-sm'>
-                      Under construction... you can see my projects on my github profile in contacts
-                    </div>
-
-                 </ScrollArea>
-                </div>
-                <p className='text-xs text-black/50 font-light'>Projects</p>
-              </div>
-            ),
+            content: Projects
           },
           {
             position: new THREE.Vector3(0.5352671589719381,1.114230146263203,4.958878532491862),
+            icon: BookText,
             label: "Publications",
             side: "left",
-            content: (
-              <div>
-                <div className="w-200 border border-white/50 rounded-none drop-shadow-sm p-3">
-                  <p className='text-white'>Detecting the Threat: A CNN and TSA Hybrid Approach for DDoS Detection in Software-Defined Networks (2026)</p>
-                  <Carousel className="flex w-full">
-                    <CarouselContent className="w-full">
-                      <CarouselItem className="flex items-center justify-center">
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
-                </div>
-              </div>
-            ),
+            content: Publications
           }
 
         ]
@@ -241,27 +96,11 @@ function App() {
         buttons: [
           {
             position: new THREE.Vector3(1.5011199803948818,0.9396154812872602,5.557922066764222),
+            icon: Phone,
             label: "Contact",
             side: "left",
-            content: (
-              <div>
-                <div className="flex flex-col min-w-100 border border-white/50 rounded-none drop-shadow-sm p-3 text-white text-lg gap-2">
-                  <p>email: martinbernardbondoc@gmail.com</p>
-                  <p>phone: (+63)977-854-2002</p>
-                  <div className=' flex text-white gap-1'>
-                    <p>github:</p>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/guy0man">guy0man</a>
-                  </div>
-                  <div className=' flex text-white gap-1'>
-                    <p>linkedIn:</p>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/martin-bernard-bondoc-264336276">Martin Bernard Bondoc</a>
-                  </div>
-                    
-                </div>
-              </div>
-            ),
+            content: Contact
           }
-
         ]
       },
       {
@@ -456,7 +295,7 @@ function App() {
   }, [])
 
   return (
-      <div className='relative h-[800vh]'>
+      <div className='relative h-[600vh]'>
         <div className='fixed top-3 left-6 z-10'>
           <p className='text-white text-xl drop-shadow-sm'>martin bondoc</p>
         </div>
@@ -469,7 +308,7 @@ function App() {
             }`}
           >
             <p className='text-2xl drop-shadow-sm font-medium text-white tracking-tight'>bundok</p>
-            <p className='text-xs drop-shadow-sm text-white/50 italic'>translates to "mountain" in english</p>
+            <p className='text-xs drop-shadow-sm text-white/50 italic'>Filipino word that translates to "mountain" in english</p>
             <p className='text-xs drop-shadow-sm text-white/70 leading-relaxed pt-2'>L: a large natural elevation of the earth’s surface rising abruptly from the surrounding land.<br>
             </br>F: a person whose strength, resilience, or character stands firm and rises above others.
             </p>
@@ -483,12 +322,15 @@ function App() {
           <div key={i} id={`btn-${i}`} className="fixed top-0 left-0 z-20">
             <Popover>
               <PopoverTrigger asChild>
-                <Button className = "bg-white text-black shadow asChild">
-                  {btn.label}
+                <Button title={btn.label} className = "w-10 h-10 bg-transparent drop-shadow-sm ring-1 rounded-full shadow hover:scale-150 data-[state=open]:scale-150 transition-all duration-200 backdrop-blur-sm">
+                  <btn.icon className="h-5! w-5! drop-shadow-sm"/>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent side={btn.side} className="w-auto h-auto bg-transparent border-none shadow-none p-0 ring-0">
-                {btn.content}
+              <PopoverContent side={btn.side} sideOffset={20} className="h-auto w-auto bg-transparent p-0 ring-0 shadow-none gap-0 overflow-visible">
+                <div className='border border-white/50 rounded-none drop-shadow-sm backdrop-blur-sm'>
+                  <btn.content/>
+                </div>
+                <p className='text-xs text-black/50 font-light pt-0.5'>{btn.label}</p>
               </PopoverContent>
             </Popover>
           </div>
