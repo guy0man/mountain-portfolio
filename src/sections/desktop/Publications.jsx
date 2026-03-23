@@ -41,21 +41,21 @@ export default function Publications() {
                 {title:"Paper",type:"image",src:getImage("publications/CNN-TSA/Paper.jpg"),thumbnail:""},
                 {title:"Publication Email",type:"image",src:getImage("publications/CNN-TSA/publication-email.png"),thumbnail:""},
                 {title:"Acceptance Letter",type:"image",src:getImage("publications/CNN-TSA/Acceptance-Letter.jpg"),thumbnail:""},
-                {title:"School Facebook Post",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},
-                {title:"Conference",type:"image",src:getImage("publications/CNN-TSA/Conference.png"),thumbnail:""},
-                {title:"Presentation 1",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-1.png"),thumbnail:""},
-                {title:"Presentation 2",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-2.png"),thumbnail:""},
-                {title:"School-Photo",type:"image",src:getImage("publications/CNN-TSA/School-Photo.png"),thumbnail:""},
+                {title:"Official School's Facebook Publication Material",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},
+                {title:"Attending Conference in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Conference.png"),thumbnail:""},
+                {title:"International Research Presentation in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-1.png"),thumbnail:""},
+                {title:"International Research Presentation in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-2.png"),thumbnail:""},
+                {title:"Delegates of MMCM in ICMLSC",type:"image",src:getImage("publications/CNN-TSA/School-Photo.png"),thumbnail:""},
             ]
         }
     ]
     return(
         <div className="max-h-[80vh] max-w-[40vw]">
-            <div className="w-[40vw] h-150">
+            <div className="w-[40vw] h-[60vh]">
                 <ScrollArea className="text-foreground h-full rounded-none snap-y snap-proximity overscroll-contain">
                     {publications.map((paper,i) => (
                         <div key={i} className="py-2 snap-start min-h-125">
-                            <p className="text-xl font-bold px-2">{paper.title} ({paper.year})</p>
+                            <p className="text-lg font-bold px-2">{paper.title} ({paper.year})</p>
                             <Carousel opts={{draggable:true,dragFree:false,loop:true}} className="py-2" plugins={
                                 [
                                     Autoplay({
