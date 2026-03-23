@@ -41,11 +41,11 @@ export default function Publications() {
                 {title:"Paper",type:"image",src:getImage("publications/CNN-TSA/Paper.jpg"),thumbnail:""},
                 {title:"Publication Email",type:"image",src:getImage("publications/CNN-TSA/publication-email.png"),thumbnail:""},
                 {title:"Acceptance Letter",type:"image",src:getImage("publications/CNN-TSA/Acceptance-Letter.jpg"),thumbnail:""},
-                {title:"Official School's Facebook Publication Material",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},
-                {title:"Attending Conference in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Conference.png"),thumbnail:""},
+                {title:"Official School Facebook Publication Material",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},
+                {title:"Attending the 10th ICMLSC in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Conference.png"),thumbnail:""},
                 {title:"International Research Presentation in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-1.png"),thumbnail:""},
                 {title:"International Research Presentation in Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-2.png"),thumbnail:""},
-                {title:"Delegates of MMCM in ICMLSC",type:"image",src:getImage("publications/CNN-TSA/School-Photo.png"),thumbnail:""},
+                {title:"Delegates of MMCM in ICMLSC Osaka, Japan",type:"image",src:getImage("publications/CNN-TSA/School-Photo.png"),thumbnail:""},
             ]
         }
     ]
