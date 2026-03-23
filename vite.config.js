@@ -4,8 +4,8 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/mountain-portfolio/",
   plugins: [react()],
+  base: "/mountain-portfolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
