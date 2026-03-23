@@ -17,6 +17,11 @@ import {
 } from "@/components/ui/dialog"
 
 export default function Publications() {
+
+    const images = import.meta.glob('@/assets/images/projects/**/*.{png,jpg,jpeg}', { eager: true })
+    const getImage = (path) => {
+        return images[`/src/assets/images/${path}`]?.default
+    }
     
     const [activeIndex, setActiveIndex] = useState(0)
     const publications = [
@@ -33,14 +38,14 @@ export default function Publications() {
                 Computing (ICMLSC 2026), Osaka, Japan, with the paper accepted for publication in the official proceedings.
             `,
             medias:[
-                {title:"Paper",type:"image",src:"/images/publications/CNN-TSA/Paper.jpg",thumbnail:""},
-                {title:"Publication Email",type:"image",src:"/images/publications/CNN-TSA/publication-email.png",thumbnail:""},
-                {title:"Acceptance Letter",type:"image",src:"/images/publications/CNN-TSA/Acceptance-Letter.jpg",thumbnail:""},
-                {title:"School Facebook Post",type:"image",src:"/images/publications/CNN-TSA/School-Facebook-Post.jpg",thumbnail:""},
-                {title:"Conference",type:"image",src:"/images/publications/CNN-TSA/Conference.png",thumbnail:""},
-                {title:"Presentation 1",type:"image",src:"/images/publications/CNN-TSA/Presentation-Photo-1.png",thumbnail:""},
-                {title:"Presentation 2",type:"image",src:"/images/publications/CNN-TSA/Presentation-Photo-2.png",thumbnail:""},
-                {title:"School-Photo",type:"image",src:"/images/publications/CNN-TSA/School-Photo.png",thumbnail:""},
+                {title:"Paper",type:"image",src:getImage("publications/CNN-TSA/Paper.jpg"),thumbnail:""},
+                {title:"Publication Email",type:"image",src:getImage("publications/CNN-TSA/publication-email.png"),thumbnail:""},
+                {title:"Acceptance Letter",type:"image",src:getImage("publications/CNN-TSA/Acceptance-Letter.jpg"),thumbnail:""},
+                {title:"School Facebook Post",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},
+                {title:"Conference",type:"image",src:getImage("publications/CNN-TSA/Conference.png"),thumbnail:""},
+                {title:"Presentation 1",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-1.png"),thumbnail:""},
+                {title:"Presentation 2",type:"image",src:getImage("publications/CNN-TSA/Presentation-Photo-2.png"),thumbnail:""},
+                {title:"School-Photo",type:"image",src:getImage("publications/CNN-TSA/School-Photo.png"),thumbnail:""},
             ]
         }
     ]

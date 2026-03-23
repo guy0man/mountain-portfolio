@@ -19,6 +19,11 @@ import {
 export default function Projects() {
     const [activeIndex, setActiveIndex] = useState(0)
 
+    const images = import.meta.glob('@/assets/images/projects/**/*.{png,jpg,jpeg}', { eager: true })
+    const getImage = (path) => {
+        return images[`/src/assets/images/${path}`]?.default
+    }
+
     const projects = [
         {
             title:"MMCM Accounting Module",
@@ -34,10 +39,10 @@ export default function Projects() {
             `,
             repo:"",
             medias:[
-                {type:"image",title:"Login Page", src:"/images/projects/MMCM-AM/Login.png", thumbnail:""},
-                {type:"image",title:"Request Page", src:"/images/projects/MMCM-AM/Requests.png", thumbnail:""},
-                {type:"image",title:"Create Requests Page", src:"/images/projects/MMCM-AM/Create-Request.png", thumbnail:""},
-                {type:"image",title:"Approvals Page", src:"/images/projects/MMCM-AM/Approval.png", thumbnail:""},      
+                {type:"image",title:"Login Page", src:getImage("projects/MMCM-AM/Login.png"), thumbnail:""},
+                {type:"image",title:"Request Page", src:getImage("projects/MMCM-AM/Requests.png"), thumbnail:""},
+                {type:"image",title:"Create Requests Page", src:getImage("projects/MMCM-AM/Create-Request.png"), thumbnail:""},
+                {type:"image",title:"Approvals Page", src:getImage("projects/MMCM-AM/Approval.png"), thumbnail:""},      
             ]
         },
         {
@@ -57,8 +62,8 @@ export default function Projects() {
             repo:"",
             medias:[
                 {type:"video",title:"System Demo",src:"https://www.youtube.com/embed/glI1UlIeY1Q", thumbnail:"https://img.youtube.com/vi/glI1UlIeY1Q/maxresdefault.jpg"},
-                {type:"image",title:"Tech Stack",src:"/images/projects/ReVisit/tech.png", thumbnail:""},
-                {type:"image",title:"Processes",src:"/images/projects/ReVisit/Server-Side-Processing.png", thumbnail:""},
+                {type:"image",title:"Tech Stack",src:getImage("projects/ReVisit/tech.png"), thumbnail:""},
+                {type:"image",title:"Processes",src:getImage("projects/ReVisit/Server-Side-Processing.png"), thumbnail:""},
             ]
         },
         {
@@ -76,10 +81,10 @@ export default function Projects() {
             `,
             repo:"",
             medias:[
-                {type:"image",title:"Login Page",src:"/images/projects/MMCM-SMS/Login.png", thumbnail:""},
-                {type:"image",title:"Statistics Page",src:"/images/projects/MMCM-SMS/Statistics.png", thumbnail:""},
-                {type:"image",title:"Scolarships Page",src:"/images/projects/MMCM-SMS/Scholarships.png", thumbnail:""},
-                {type:"image",title:"Employees Page",src:"/images/projects/MMCM-SMS/Employees.png", thumbnail:""},
+                {type:"image",title:"Login Page",src:getImage("projects/MMCM-SMS/Login.png"), thumbnail:""},
+                {type:"image",title:"Statistics Page",src:getImage("projects/MMCM-SMS/Statistics.png"), thumbnail:""},
+                {type:"image",title:"Scolarships Page",src:getImage("projects/MMCM-SMS/Scholarships.png"), thumbnail:""},
+                {type:"image",title:"Employees Page",src:getImage("projects/MMCM-SMS/Employees.png"), thumbnail:""},
                 {type:"video",title:"Website Demo",src:"https://www.youtube.com/embed/IbwquRLG4Ak", thumbnail:"https://img.youtube.com/vi/IbwquRLG4Ak/maxresdefault.jpg"}
             ],
         },
