@@ -3,9 +3,9 @@ import { useEffect,useState } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { ArrowDown,User,SearchAlert,Brush,ShieldCheck,FileCodeCorner,BookText,Phone } from "lucide-react"
-import {Profile,AboutMe,Skills,Certifications,Projects,Publications,Contact} from "@/sections"
+import {Profile,AboutMe,Skills,Certifications,Projects,Publications,Contact} from "@/sections/desktop"
 
-import "./App.css"
+import "../styles/Desktop.css"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,7 +14,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-function App() {
+function Desktop() {
   const [section, setSection] = useState(0)
   const [scrolled, setScrolled] = useState(false)
 
@@ -342,8 +342,6 @@ function App() {
           </div>
         ))}
       </div>
-  )
-      
+  )     
 }
-
-export default App
+export default Desktop
