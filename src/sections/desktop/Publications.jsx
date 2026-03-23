@@ -89,22 +89,23 @@ export default function Publications() {
                                                             </div>
                                                         )}
                                                     </DialogTrigger>
-                                                    <DialogContent className="max-w-3/5! max-h-4/5! top-5/12! p-2 bg-transparent ring-0 items-center">
+                                                    <DialogContent className="max-w-[100vh]! max-h-screen! p-2 bg-transparent ring-0 items-center">
                                                         <DialogTitle className="sr-only"></DialogTitle>
                                                         <Carousel opts={{ startIndex: activeIndex, loop:true }}>
                                                             <CarouselContent className="items-center">
                                                                 {paper.medias.map((media,x) => (
                                                                     <CarouselItem key={x}>
-                                                                        {media.type === "image" && (
+                                                                        <div className="flex w-full h-auto justify-center">
+                                                                            {media.type === "image" && (
                                                                                 <div className="flex flex-col items-center">
                                                                                     <img
                                                                                         src={media.src}
-                                                                                        className="w-3/5 object-cover"
+                                                                                        className="max-h-[90vh] object-cover"
                                                                                     />
                                                                                     <p>{media.title}</p>
                                                                                 </div>
                                                                             )}
-                                                                        {media.type === "video" && (
+                                                                            {media.type === "video" && (
                                                                                 <div>
                                                                                     <iframe
                                                                                         src={media.src}
@@ -115,6 +116,7 @@ export default function Publications() {
                                                                                     <p>{media.title}</p>
                                                                                 </div>
                                                                             )}
+                                                                        </div>
                                                                     </CarouselItem>
                                                                 ))}
                                                             </CarouselContent>

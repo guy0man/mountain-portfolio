@@ -91,7 +91,7 @@ export default function Projects() {
     ]
     return(
         <div className="max-h-[80vh] max-w-[40vw]">
-            <div className="w-[40vw] h-150">
+            <div className="w-[40vw] h-[80vh]">
                 <ScrollArea className="text-foreground rounded-none h-full snap-y snap-mandatory overscroll-contain space-y-10">
                     {projects.map((project,i) => (
                         <div key={i} className="pb-5 pt-2 snap-start">
@@ -129,32 +129,34 @@ export default function Projects() {
                                                             </div>
                                                         )}
                                                     </DialogTrigger>
-                                                    <DialogContent className="max-w-3/5! max-h-4/5! top-5/12! p-2 bg-transparent ring-0 items-center">
+                                                    <DialogContent className="max-w-[100vh]! max-h-screen! p-2 bg-transparent ring-0 items-center">
                                                         <DialogTitle className="sr-only"></DialogTitle>
                                                         <Carousel opts={{ startIndex: activeIndex, loop:true}}>
                                                             <CarouselContent className="items-center">
                                                                 {project.medias.map((media,x) => (
                                                                     <CarouselItem key={x}>
-                                                                        {media.type === "image" && (
+                                                                        <div className="flex w-full h-auto justify-center">
+                                                                            {media.type === "image" && (
                                                                                 <div className="flex flex-col items-center">
                                                                                     <img
                                                                                         src={media.src}
-                                                                                        className="w-3/5 object-cover"
+                                                                                        className="max-h-[90vh] object-cover"
                                                                                     />
                                                                                     <p>{media.title}</p>
                                                                                 </div>
                                                                             )}
-                                                                        {media.type === "video" && (
-                                                                                <div>
+                                                                            {media.type === "video" && (
+                                                                                <div className="w-full aspect-video">
                                                                                     <iframe
                                                                                         src={media.src}
-                                                                                        className="w-full aspect-video"
+                                                                                        className="w-full h-full"
                                                                                         allow="accelerometer; gyroscope; web-share"
                                                                                         allowFullScreen
                                                                                     />
                                                                                     <p>{media.title}</p>
                                                                                 </div>
                                                                             )}
+                                                                        </div>
                                                                     </CarouselItem>
                                                                 ))}
                                                             </CarouselContent>

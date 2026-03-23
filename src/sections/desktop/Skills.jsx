@@ -14,7 +14,7 @@ export default function Skills() {
         },
         {
             category:"Tools",
-            items:["GitHub","Docker","Microsoft 365","Canva","Adobe Premier","Adobe Acrobat"]
+            items:["GitHub","Docker","Figma","Microsoft 365","Canva","Adobe Premier","Adobe Acrobat"]
         }
     ]
     return(
