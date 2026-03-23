@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/popover"
 
 function Desktop() {
+  const [loading, setLoading] = useState(true)
   const [section, setSection] = useState(0)
   const [scrolled, setScrolled] = useState(false)
 
@@ -185,7 +186,11 @@ function Desktop() {
           }
         })
 
-        scene.add(model)    
+        scene.add(model)  
+        
+        setTimeout(() => {
+          setLoading(false)    
+        }, 500)
       },
 
       undefined,
@@ -301,6 +306,9 @@ function Desktop() {
       <div className='relative h-[600vh]'>
         <div className='fixed top-3 left-6 z-10'>
           <p className='text-foreground font-medium text-xl'>martin bondoc</p>
+        </div>
+        <div className={`fixed inset-0 z-9 backdrop-blur-sm transition-opacity duration-1000
+          ${loading ? "opacity-100" : "opacity-0 pointer-events-none"}`}>   
         </div>
 
         <canvas id="bg" className='fixed top-0 left-0 z-0'/> 

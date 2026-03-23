@@ -18,7 +18,7 @@ import {
 
 export default function Publications() {
 
-    const images = import.meta.glob('@/assets/images/projects/**/*.{png,jpg,jpeg}', { eager: true })
+    const images = import.meta.glob('@/assets/images/publications/**/*.{png,jpg,jpeg}', { eager: true })
     const getImage = (path) => {
         return images[`/src/assets/images/${path}`]?.default
     }
