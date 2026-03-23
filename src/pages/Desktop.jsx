@@ -313,7 +313,7 @@ function Desktop() {
 
         <canvas id="bg" className='fixed top-0 left-0 z-0'/> 
 
-        <section className="fixed flex flex-row bottom-6 left-6 z-10 animate-[content-fade_1.0s_ease-out]">
+        <section className="fixed flex flex-row bottom-6 left-6 z-10 max-w-[37vw] animate-[content-fade_1.0s_ease-out]">
           <div className={`transition-all duration-100 ${
               !scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
@@ -337,7 +337,7 @@ function Desktop() {
                   <btn.icon className="h-5! w-5! text-foreground"/>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent side={btn.side} sideOffset={20} className="group h-auto w-auto bg-transparent p-0 ring-0 shadow-none gap-0 overflow-visible">
+              <PopoverContent side={btn.side} sideOffset={20}  avoidCollisions collisionPadding={12} className="group h-auto w-auto max-h-[50vh]! bg-transparent p-0 ring-0 shadow-none gap-0">
                 <div className='border border-foreground/50 rounded-none animate-[border-draw_1.0s_ease-out_forwards]'>
                   <div className='opacity-0 backdrop-blur-sm animate-[content-fade_0.50s_ease-out_0.75s_forwards]'>
                      <div className="opacity-0 animate-[content-fade_0.5s_ease-out_1.0s_forwards]">

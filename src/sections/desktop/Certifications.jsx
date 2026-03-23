@@ -8,10 +8,15 @@ import {
 } from "@/components/ui/collapsible"
 
 export default function Certifications() {
+    const images = import.meta.glob('@/assets/images/certifications/**/*.{png,jpg,jpeg}', { eager: true })
+    const getImage = (path) => {
+        return images[`/src/assets/images/${path}`]?.default
+    }
+
     const certifications = [
         {
             title:"Cisco Certified Network Associate (CCNA)",
-            image:"/images/certifications/CCNA-Cert.jpg"
+            image:getImage("certifications/CCNA-Cert.jpg")
         },
         {
             title:"Microsoft Office Specialist: Excel Associate",
@@ -21,10 +26,10 @@ export default function Certifications() {
 
 
     return(
-        <div className="w-200 p-2">
-            <ScrollArea className="text-foreground h-auto h-max-200 rounded-none">
+        <div className="max-w-[50vw] p-2">
+            <ScrollArea className="text-foreground h-auto rounded-none">
                 {certifications.map((cert,i) => (
-                    <Collapsible>
+                    <Collapsible key={i}>
                         <div className='flex gap-2 items-center'>
                             <p className="text-lg">{cert.title}</p>
                             {cert.image && (
