@@ -160,9 +160,10 @@ function Desktop() {
     scene.add(shadowLight)
 
     const loader = new GLTFLoader()
+
+    const modelPath = `${import.meta.env.BASE_URL}models/low-poly-mountain.glb`;
     
-    loader.load(
-      "/models/low-poly-mountain.glb",
+    loader.load(modelPath,
 
       (gltf) => {
         const model = gltf.scene
