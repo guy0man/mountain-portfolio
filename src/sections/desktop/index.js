@@ -1,7 +1,0 @@
-export {default as Profile} from "./Profile"
-export {default as AboutMe} from "./AboutMe"
-export {default as Skills} from "./Skills"
-export {default as Certifications} from "./Certifications"
-export {default as Projects} from "./Projects"
-export {default as Publications} from "./Publications"
-export {default as Contact} from "./Contact"
