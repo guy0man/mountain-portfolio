@@ -305,7 +305,7 @@ function Desktop() {
   return (
       <div className='relative h-[600vh]'>
         <div className='fixed top-3 left-6 z-10'>
-          <p className='text-foreground font-medium text-xl'>martin bondoc</p>
+          <p className='text-foreground font-medium text-xl animate-[content-fade_1.0s_ease-out]'>martin bondoc</p>
         </div>
         <div className={`fixed inset-0 z-9 backdrop-blur-sm transition-opacity duration-1000
           ${loading ? "opacity-100" : "opacity-0 pointer-events-none"}`}>   
@@ -313,7 +313,7 @@ function Desktop() {
 
         <canvas id="bg" className='fixed top-0 left-0 z-0'/> 
 
-        <section className="fixed flex flex-row bottom-6 left-6 z-10">
+        <section className="fixed flex flex-row bottom-6 left-6 z-10 animate-[content-fade_1.0s_ease-out]">
           <div className={`transition-all duration-100 ${
               !scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
@@ -333,7 +333,7 @@ function Desktop() {
           <div key={i} id={`btn-${i}`} className="fixed top-0 left-0 z-20">
             <Popover>
               <PopoverTrigger asChild>
-                <Button title={btn.label} className = "w-10 h-10 bg-transparent ring-1 ring-foreground rounded-full shadow hover:h-12 hover:w-12 hover:backdrop-blur-sm data-[state=open]:h-15 data-[state=open]:w-15  data-[state=open]:backdrop-blur-sm  transition-all duration-200">
+                <Button title={btn.label} className = "w-10 h-10 bg-transparent ring-1 ring-foreground rounded-full shadow hover:h-12 hover:w-12 hover:backdrop-blur-sm data-[state=open]:h-15 data-[state=open]:w-15  data-[state=open]:backdrop-blur-sm animate-[content-fade_1.0s_ease-out]  transition-all duration-200">
                   <btn.icon className="h-5! w-5! text-foreground"/>
                 </Button>
               </PopoverTrigger>
