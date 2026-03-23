@@ -45,11 +45,11 @@ export default function Publications() {
         }
     ]
     return(
-        <div className="h-190 w-200 p-2">
-            <ScrollArea className="text-white text-sm h-full rounded-none pr-3 snap-y snap-proximity overscroll-contain">
+        <div className="h-190 w-200">
+            <ScrollArea className="text-foreground h-full rounded-none snap-y snap-proximity overscroll-contain">
                 {publications.map((paper,i) => (
                     <div key={i} className="py-2 snap-start min-h-125">
-                        <p className="text-lg px-2">- {paper.title} ({paper.year})</p>
+                        <p className="text-xl font-medium px-2">{paper.title} ({paper.year})</p>
                         <Carousel opts={{draggable:true,dragFree:false,loop:true}} className="py-2" plugins={
                             [
                                 Autoplay({
@@ -125,8 +125,14 @@ export default function Publications() {
                             </CarouselContent>
                         </Carousel>
                         <div className="px-2">
-                            <p className="pt-2 text-justify">Conference: {paper.conference}</p>
-                            <p className="pt-2 text-justify">Role: {paper.role}</p>
+                            <div className="flex gap-1">
+                                <p className="text-foreground/75">Conference: </p>
+                                <p className="font-medium">{paper.conference}</p>
+                            </div>
+                            <div className="flex gap-1">
+                                <p className="text-foreground/75">Role: </p>
+                                <p className="font-medium">{paper.role}</p>
+                            </div>
                             <p className="pt-2 text-justify">{paper.description}</p>
                         </div>
                     </div>

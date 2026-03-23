@@ -5,6 +5,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { ArrowDown,User,SearchAlert,Brush,ShieldCheck,FileCodeCorner,BookText,Phone } from "lucide-react"
 import {Profile,AboutMe,Skills,Certifications,Projects,Publications,Contact} from "@/sections"
 
+import "./App.css"
+
 import { Button } from "@/components/ui/button"
 import {
   Popover,
@@ -297,7 +299,7 @@ function App() {
   return (
       <div className='relative h-[600vh]'>
         <div className='fixed top-3 left-6 z-10'>
-          <p className='text-white text-xl drop-shadow-sm'>martin bondoc</p>
+          <p className='text-foreground font-medium text-xl'>martin bondoc</p>
         </div>
 
         <canvas id="bg" className='fixed top-0 left-0 z-0'/> 
@@ -307,14 +309,14 @@ function App() {
               !scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <p className='text-2xl drop-shadow-sm font-medium text-white tracking-tight'>bundok</p>
-            <p className='text-xs drop-shadow-sm text-white/50 italic'>Filipino word that translates to "mountain" in english</p>
-            <p className='text-xs drop-shadow-sm text-white/70 leading-relaxed pt-2'>L: a large natural elevation of the earth’s surface rising abruptly from the surrounding land.<br>
+            <p className='text-xl font-medium text-foreground tracking-tight'>bundok</p>
+            <p className='text-xs text-foreground/50 italic'>Filipino word that translates to "mountain" in english</p>
+            <p className='text-xs text-foreground/70 leading-relaxed'>L: a large natural elevation of the earth’s surface rising abruptly from the surrounding land.<br>
             </br>F: a person whose strength, resilience, or character stands firm and rises above others.
             </p>
           </div>
         </section>
-        <ArrowDown className={`fixed bottom-10 left-1/2 w-6 h-6 text-white transition-all duration-100 ${
+        <ArrowDown className={`fixed bottom-10 left-1/2 w-6 h-6 text-foreground transition-all duration-100 ${
               !scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
         />
@@ -322,15 +324,19 @@ function App() {
           <div key={i} id={`btn-${i}`} className="fixed top-0 left-0 z-20">
             <Popover>
               <PopoverTrigger asChild>
-                <Button title={btn.label} className = "w-10 h-10 bg-transparent drop-shadow-sm ring-1 rounded-full shadow hover:scale-150 data-[state=open]:scale-150 transition-all duration-200 backdrop-blur-sm">
-                  <btn.icon className="h-5! w-5! drop-shadow-sm"/>
+                <Button title={btn.label} className = "w-10 h-10 bg-transparent ring-1 ring-foreground rounded-full shadow hover:h-12 hover:w-12 hover:backdrop-blur-sm data-[state=open]:h-15 data-[state=open]:w-15  data-[state=open]:backdrop-blur-sm  transition-all duration-200">
+                  <btn.icon className="h-5! w-5! text-foreground"/>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent side={btn.side} sideOffset={20} className="h-auto w-auto bg-transparent p-0 ring-0 shadow-none gap-0 overflow-visible">
-                <div className='border border-white/50 rounded-none drop-shadow-sm backdrop-blur-sm'>
-                  <btn.content/>
+              <PopoverContent side={btn.side} sideOffset={20} className="group h-auto w-auto bg-transparent p-0 ring-0 shadow-none gap-0 overflow-visible">
+                <div className='border border-foreground/50 rounded-none animate-[border-draw_1.0s_ease-out_forwards]'>
+                  <div className='opacity-0 backdrop-blur-sm animate-[content-fade_0.50s_ease-out_0.75s_forwards]'>
+                     <div className="opacity-0 animate-[content-fade_0.5s_ease-out_1.0s_forwards]">
+                      <btn.content/>
+                    </div>
+                  </div>
                 </div>
-                <p className='text-xs text-black/50 font-light pt-0.5'>{btn.label}</p>
+                <p className='text-xs text-foreground/75 font-light pt-0.5'>{btn.label}</p>
               </PopoverContent>
             </Popover>
           </div>

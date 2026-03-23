@@ -18,11 +18,11 @@ export default function Skills() {
         }
     ]
     return(
-        <div className="flex justify-between gap-5 drop-shadow-sm p-3 text-white">
+        <div className="flex justify-between gap-5 drop-shadow-sm p-3 text-foreground">
             {skills.map((skill,i) => (
                 <div key={i}>
-                    <p className='font-semibold'>{skill.category}</p>
-                    <ul className='text-sm'>
+                    <p className='font-medium'>{skill.category}</p>
+                    <ul>
                         {skill.items.map((item,n) => (
                             <li key={n}>- {item}</li>
                         ))}

@@ -22,7 +22,7 @@ export default function Certifications() {
 
     return(
         <div className="w-200 p-2">
-            <ScrollArea className="text-white text-sm h-auto h-max-200 rounded-none">
+            <ScrollArea className="text-foreground h-auto h-max-200 rounded-none">
                 {certifications.map((cert,i) => (
                     <Collapsible>
                         <div className='flex gap-2 items-center'>
@@ -30,7 +30,7 @@ export default function Certifications() {
                             {cert.image && (
                                 <CollapsibleTrigger asChild>
                                     <Button className="size-8 bg-transparent font-semibold border-none p-0">
-                                        <ChevronsUpDown />
+                                        <ChevronsUpDown className="text-foreground" />
                                     </Button>
                                 </CollapsibleTrigger>
                             )}

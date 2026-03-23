@@ -1,7 +1,7 @@
 import Autoplay from "embla-carousel-autoplay"
 import {useState } from "react"
 import {Play} from "lucide-react"
-import { ScrollArea} from "@/components/ui/scroll-area"
+import { ScrollArea, ScrollBar} from "@/components/ui/scroll-area"
 import {
   Carousel,
   CarouselContent,
@@ -86,10 +86,10 @@ export default function Projects() {
     ]
     return(
         <div className="h-190 w-200">
-            <ScrollArea className="text-white text-sm h-full rounded-none pr-3 snap-y snap-mandatory overscroll-contain space-y-10">
+            <ScrollArea className="text-foreground h-full rounded-none snap-y snap-mandatory overscroll-contain space-y-10">
                 {projects.map((project,i) => (
-                    <div key={i} className="py-5 snap-start">
-                        <p className="text-lg px-2">- {project.title}</p>
+                    <div key={i} className="pb-5 pt-2 snap-start">
+                        <p className="text-lg font-medium px-2">{project.title}</p>
                         <Carousel opts={{draggable:true,dragFree:false,loop:true}} className="py-2" plugins={
                             [
                                 Autoplay({
@@ -165,8 +165,14 @@ export default function Projects() {
                             </CarouselContent>
                         </Carousel>
                         <div className="px-2">
-                            <p>Role: {project.role}</p>
-                            <p>Tech: {project.tech}</p>
+                            <div className="flex gap-1">
+                                <p className="text-foreground/75">Role: </p>
+                                <p className="font-medium">{project.role}</p>
+                            </div>
+                            <div className="flex gap-1">
+                                <p className="text-foreground/75">Tech: </p>
+                                <p className="font-medium">{project.tech}</p>
+                            </div>
                             <p className="pt-2 text-justify">{project.description}</p>
                         </div>
                     </div>
