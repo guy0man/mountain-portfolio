@@ -90,8 +90,8 @@ export default function Projects() {
         },
     ]
     return(
-        <div className="max-h-[80vh] max-w-[40vw]">
-            <div className="w-[40vw] h-[60vh]">
+        <div className="max-h-[70vh] max-w-[40vw]">
+            <div className="w-[40vw] h-[70vh]">
                 <ScrollArea className="text-foreground rounded-none h-full snap-y snap-mandatory overscroll-contain space-y-10">
                     {projects.map((project,i) => (
                         <div key={i} className="pb-5 pt-2 snap-start">

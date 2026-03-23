@@ -50,8 +50,8 @@ export default function Publications() {
         }
     ]
     return(
-        <div className="max-h-[80vh] max-w-[40vw]">
-            <div className="w-[40vw] h-[60vh]">
+        <div className="max-h-[70vh] max-w-[40vw]">
+            <div className="w-[40vw] h-[70vh]">
                 <ScrollArea className="text-foreground h-full rounded-none snap-y snap-proximity overscroll-contain">
                     {publications.map((paper,i) => (
                         <div key={i} className="py-2 snap-start min-h-125">
