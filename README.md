@@ -12,8 +12,7 @@ npm run dev
 ```
 Update Workflow
 ```bash
-Remove-Item -Recurse -Force dist
 npm run build
-npx gh-pages -d dist
+npm run deploy
 ```
 
