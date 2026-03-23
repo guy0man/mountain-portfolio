@@ -2,7 +2,7 @@ import {Link2} from "lucide-react"
 
 export default function Publications() {
     return(
-        <div className="flex flex-col min-w-100 text-foreground gap-2 p-2">
+        <div className="flex flex-col max-w-[60vw] text-foreground gap-2 p-2">
             <p>email: martinbernardbondoc@gmail.com</p>
             <p>phone: (+63)977-854-2002</p>
             <div className=' flex gap-1'>

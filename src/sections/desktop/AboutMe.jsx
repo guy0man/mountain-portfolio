@@ -1,6 +1,6 @@
 export default function AboutMe() {
     return(
-        <div className="max-w-200 p-2">
+        <div className="max-w-[50vw] p-2">
             <p className=' text-foreground mb-1 text-justify'>
             I am a Computer Science undergraduate at Mapúa Malayan Colleges Mindanao with a 
             strong interest in cybersecurity, networking, and software engineering. I enjoy 

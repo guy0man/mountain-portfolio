@@ -38,7 +38,7 @@ export default function Publications() {
                 Computing (ICMLSC 2026), Osaka, Japan, with the paper accepted for publication in the official proceedings.
             `,
             medias:[
-                {title:"Paper",type:"image",src:getImage("publications/CNN-TSA/Paper.jpg"),thumbnail:""},
+                {title:"Publication Paper",type:"image",src:getImage("publications/CNN-TSA/Paper.jpg"),thumbnail:""},
                 {title:"Publication Email",type:"image",src:getImage("publications/CNN-TSA/publication-email.png"),thumbnail:""},
                 {title:"Acceptance Letter",type:"image",src:getImage("publications/CNN-TSA/Acceptance-Letter.jpg"),thumbnail:""},
                 {title:"Official School Facebook Publication Material",type:"image",src:getImage("publications/CNN-TSA/School-Facebook-Post.jpg"),thumbnail:""},

@@ -26,10 +26,10 @@ export default function Certifications() {
 
 
     return(
-        <div className="max-w-[50vw] p-2">
+        <div className="max-w-[50vw] max-h-[50vh] p-2">
             <ScrollArea className="text-foreground h-auto rounded-none">
                 {certifications.map((cert,i) => (
-                    <Collapsible key={i}>
+                    <Collapsible key={i} className="pb-2">
                         <div className='flex gap-2 items-center'>
                             <p className="text-lg">{cert.title}</p>
                             {cert.image && (
@@ -44,7 +44,7 @@ export default function Certifications() {
                         <img
                             src={cert.image}
                             alt="Person"
-                            className="w-full mb-3"
+                            className="max-h-[40vh] object-cover"
                         />
                         </CollapsibleContent>
                     </Collapsible>

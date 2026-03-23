@@ -18,7 +18,7 @@ export default function Skills() {
         }
     ]
     return(
-        <div className="flex justify-between gap-5 drop-shadow-sm p-3 text-foreground">
+        <div className="max-w-[50vw] flex justify-between gap-5 p-2 text-foreground">
             {skills.map((skill,i) => (
                 <div key={i}>
                     <p className='font-medium'>{skill.category}</p>
