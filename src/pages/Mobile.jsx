@@ -5,7 +5,7 @@ function Mobile(){
     return (
         <div>
             <div className='fixed top-3 left-6 z-10'>
-                <p className='text-foreground font-medium text-sm'>martin bondoc (under construction...)</p>
+                <p className='text-foreground font-medium text-sm'>martin bondoc (mobile resolutions is under construction. please view portfolio in a higher resolution for the meantime...)</p>
             </div>
         </div>
     )
